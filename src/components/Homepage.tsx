@@ -33,7 +33,6 @@ interface PokemonDetails {
       // Fetch details for each Pokémon
       const detailedData = await Promise.all(
         data.results.map(async (pokemon: Pokemon) => {
-          console.log("pokemon",pokemon)
           const details = await fetchPokemonDetails(pokemon.url);
           return details;
         })
